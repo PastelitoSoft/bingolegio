@@ -15,7 +15,7 @@ function playCartoon() {
 
 export function cargarLista() {
     listaIndices = [];
-    for (let i = 0; i <= 2; i++) {   /// rellena la lista de numeros, se usan para llamar a las imagenes
+    for (let i = 0; i <= 39; i++) {   /// rellena la lista de numeros, se usan para llamar a las imagenes
         listaIndices.push(i);
     }
 }
@@ -55,7 +55,7 @@ export function animacionFlip(numeroAleatorio) {
         if (numeroAleatorio != undefined) {
             carta.innerHTML = `<div class="carta carta-medida"><img id='img' class='imagen' src="./img/img-${numeroAleatorio}.PNG"></div>`
         } else {
-            carta.innerHTML = `<div class="carta carta-final carta-medida"><img id='img-bicho-final' class='bichito' src="./img/bichito-ansiedad.png"><p class="texto-final">¡No quedan cartas en el mazo!</p></div>`
+            carta.innerHTML = `<div class="carta carta-final carta-medida"><img id='img-bicho-final' class='bichito' src="./img/plufi_sin.png"><p class="texto-final">¡No quedan cartas en el mazo!</p></div>`
             setTimeout(() => {
                 animacionTerminar();
             }, 2000);
@@ -87,7 +87,7 @@ export function recargarLista() {
     carta.classList.remove('invisible');
     document.getElementById('btn-girar').removeAttribute('disabled');
     listaIndices = [];
-    for (let i = 0; i <= 15; i++) {  /// rellena la lista de numeros, se usan para llamar a las imagenes
+    for (let i = 0; i <= 39; i++) {  /// rellena la lista de numeros, se usan para llamar a las imagenes
         listaIndices.push(i);
     }
     shakeY();
